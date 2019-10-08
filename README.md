@@ -6,4 +6,3 @@ Assignment 5, PLAB2
 - Learn about Charlieplexed circuits.
 - Learn the basics of a Finite State Machine (FSM) and its use as a controller.
 - Gain experience integrating the keypad, Charlieplexer and FSM on the Raspberry Pi (R-Pi).
-- hjhjh
