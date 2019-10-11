@@ -1,7 +1,7 @@
 """FSM-class"""
 
-from .rule import Rule
-from .kpc import KPC
+from rule import Rule
+from kpc import KPC
 
 
 class FSM:
