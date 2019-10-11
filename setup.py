@@ -9,9 +9,9 @@ GPIO.setup(23, GPIO.out)
 GPIO.setup(24, GPIO.out)
 GPIO.setup(25, GPIO.out)
 
-GPIO.setup(17, GPIO.IN, pull up down=GPIO.PUD DOWN)
-GPIO.setup(27, GPIO.IN, pull up down=GPIO.PUD DOWN)
-GPIO.setup(22, GPIO.IN, pull up down=GPIO.PUD DOWN)
+GPIO.setup(17, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+GPIO.setup(27, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+GPIO.setup(22, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
 def check_pressed():
     for item in [18,23,24,25]:
