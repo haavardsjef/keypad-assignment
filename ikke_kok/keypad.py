@@ -1,12 +1,23 @@
 """Class for handling keypad"""
-import RPi.GPIO as GPIO
 import time
+#import RPi.GPIO as GPIO
 
-class Keypad:
+
+class KeyPad:
 
     def __init__(self):
-        key_pairs = {1:(18, 17), 2:(18, 27), 3:(18, 22), 4:(23, 17), 5:(23, 27), 6:(23, 22),
-                        7:(24, 17), 8:(24, 27), 9:(24, 22), '*':(25, 17), 0:(25, 27), '#'(25, 22)}
+        key_pairs = {1: (18, 17),
+                     2: (18, 27),
+                     3: (18, 22),
+                     4: (23, 17),
+                     5: (23, 27),
+                     6: (23, 22),
+                     7: (24, 17),
+                     8: (24, 27),
+                     9: (24, 22),
+                     '*': (25, 17),
+                     0: (25, 27),
+                     '#': (25, 22)}
 
     def setup(self):
         GPIO.setmode(GPIO.BCM)
@@ -28,8 +39,11 @@ class Keypad:
                     if GPIO.input(item_2) == GPIO.HIGH:
                         time.sleep(10)
                         x += 1
-                if x = 10:
+                if x == 10:
                     GPIO.output(item_1, LOW)
                     return (item_1, item_2)
             GPIO.output(item_1, LOW)
             return None
+
+    def get_next_signal(self)
+        pass
