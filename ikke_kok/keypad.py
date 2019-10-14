@@ -44,9 +44,8 @@ class KeyPad:
             GPIO.output(item_1, GPIO.LOW)
             return None
 
-    def get_next_signal(self)
-        k = KeyPad()
+    def get_next_signal(self):
         y = None
         while y is None:
-            y = k.do_polling()
-        return self.key_pairs[y]
+            y = self.do_polling()
+        return self.key_pairs.get(y)
