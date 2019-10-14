@@ -1,6 +1,5 @@
 """Class for handling keypad"""
 import time
-#import RPi.GPIO as GPIO
 
 
 class KeyPad:
