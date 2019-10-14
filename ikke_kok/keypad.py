@@ -42,7 +42,7 @@ class KeyPad:
                         GPIO.output(item_1, GPIO.LOW)
                         return (item_1, item_2)
             GPIO.output(item_1, GPIO.LOW)
-            return None
+        return None
 
     def get_next_signal(self):
         y = None
