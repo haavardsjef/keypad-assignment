@@ -29,23 +29,31 @@ class LEDboard:
             self.ledInterface.loop(leds, 2)
             leds.pop()
 
-    def power_on(self):
+    def power_up(self):
         """Light signalizing power on"""
         self.ledInterface.loop([1, 2, 3], 4)
         self.ledInterface.loop([1, 2], 2)
         self.ledInterface.loop([1], 2)
 
-    def power_off(self):
+    def power_down(self):
         """Light signalizing power off"""
         self.ledInterface.loop([1, 2], 2)
         self.ledInterface.loop([1], 2)
 
-    def logged_in(self):
+    def success(self):
         """Signalizing correct login"""
         self.ledInterface.loop([1, 2], 1)
         self.ledInterface.loop([3, 4], 1)
         self.ledInterface.loop([5, 6], 1)
         self.ledInterface.loop([1, 2, 3, 4, 5, 6, ], 2)
+
+    def failure(self):
+        """Signalizing failure to login"""
+        self.ledInterface.loop([1, 2, 3, 4, 5, 6, ], 2)
+        self.ledInterface.loop([5, 6], 1)
+        self.ledInterface.loop([3, 4], 1)
+        self.ledInterface.loop([1, 2], 1)
+
 
 
 
