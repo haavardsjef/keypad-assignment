@@ -35,7 +35,7 @@ class Kpc:
             self.override_signal = None
             return temp_signal
         else:
-            return input("Next signal: ")#self.keypad.get_next_signal()
+            return self.keypad.get_next_signal()
 
     def verify_login(self, signal):
         """ verify login - Check that the password just entered via the keypad matches that
