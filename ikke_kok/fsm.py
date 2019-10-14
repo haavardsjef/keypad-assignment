@@ -134,8 +134,9 @@ class Fsm:
 
         while self.state != "S-LOGOUT":
             self.signal = self.get_next_signal()
-            self.run_rules()
+            self.run_rules(True)
 
 
-FSM = Fsm()
-FSM.main_loop()
+if __name__ == "__main__":
+    FSM = Fsm()
+    FSM.main_loop()
