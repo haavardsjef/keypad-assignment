@@ -34,8 +34,7 @@ class Kpc:
             temp_signal = self.override_signal
             self.override_signal = None
             return temp_signal
-        else:
-            return self.keypad.get_next_signal()
+        return self.keypad.get_next_signal()
 
     def verify_login(self, signal):
         """ verify login - Check that the password just entered via the keypad matches that
@@ -71,7 +70,7 @@ class Kpc:
         """ light one led - Using values stored in the Lid and Ldur slots,
         call the LED Board and request
         that LED number Lid be turned on for Ldur seconds """
-        self.led_board.light_led(self.led_id, int(self.led_duration))
+        self.led_board.light_led(int(self.led_id), int(self.led_duration))
         self.led_duration = ""
 
     def flash_leds(self, signal):
@@ -80,7 +79,7 @@ class Kpc:
 
     def twinkle_leds(self, signal):
         """ Call the LED Board and request the twinkling of all LEDs."""
-        self.led_board.twinkle_all_leds(self.led_duration)
+        self.led_board.twinkle_all_leds()
 
     def exit_action(self, signal):
         """ Call the LED Board to initiate the ”power down” lighting sequence."""

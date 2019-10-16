@@ -10,7 +10,7 @@ def signal_is_digit(signal):
 
 def signal_is_led(signal):
     """ Checks to see whether the signal is a valid led #. """
-    return signal in "012345"
+    return signal in "123456"
 
 
 def all_symbols(signal):
@@ -39,8 +39,7 @@ class Fsm:
                    "A10": self.agent.nothing,
                    "A11": self.agent.append_next_seconds_digit,
                    "A12": self.agent.light_one_led,
-                   "A13": self.agent.exit_action
-                   }
+                   "A13": self.agent.exit_action}
 
                  # RULES LOG IN
         rules = [Rule("S-INIT", "S-READ", all_symbols, actions["A0"]),
